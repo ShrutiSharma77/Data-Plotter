@@ -17,6 +17,7 @@ if xlsx_file is not None:
     for i in range(0,len(column_values)-1):
         avg = column_values[i]+column_values[i+1]
         averages.append(avg)
+        i = i + 2
         
         
     st.write("Column Values:", column_values)
