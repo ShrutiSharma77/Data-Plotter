@@ -20,5 +20,4 @@ if xlsx_file is not None:
         averages.append(avg)
         
         
-    st.write("Column Values:", column_values)
     st.write(averages)
