@@ -20,4 +20,4 @@ if xlsx_file is not None:
         averages.append(avg)
         
         
-    st.write(averages)
+    st.write("Averages:",averages)
