@@ -18,6 +18,13 @@ if xlsx_file is not None:
         avg = (column_values[i]+column_values[i+1])/2
         print(column_values[i+1])
         averages.append(avg)
+
+    avg_dia = np.array(averages)   
+    
+    averages_flattened = avg_dia.flatten()
+
+    st.write("Averages:")
+    for value in averages_flattened:
+        st.write(value)
+
         
-        
-    st.write("Averages:",averages)
