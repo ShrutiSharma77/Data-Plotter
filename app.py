@@ -12,12 +12,12 @@ if xlsx_file is not None:
     st.write(df)
     column_values = df.to_numpy()
 
-    i = 0
-
-    for i in column_values:
-        sum = column_values[i]+column_values[i+1]
-        st.write(sum)
-        sum = 0
-        i = i + 2
+    averages = []
     
+    for i in range(0,len(column_values)-1):
+        avg = column_values[i]+column_values[i+1]
+        averages.append(avg)
+        
+        
     st.write("Column Values:", column_values)
+    st.write("Averages:",averages)
