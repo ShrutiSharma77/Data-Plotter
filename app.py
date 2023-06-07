@@ -22,4 +22,4 @@ if xlsx_file is not None:
         
         
     st.write("Column Values:", column_values)
-    st.write(averages)
+    st.write(averages.to_numpy())
