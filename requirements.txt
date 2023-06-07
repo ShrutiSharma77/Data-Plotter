@@ -1,0 +1,14 @@
+
+
+
+
+matplotlib==3.5.1
+
+numpy==1.21.5
+
+openpyxl==3.1.2
+
+pandas==1.5.3
+
+
+streamlit==1.23.1
