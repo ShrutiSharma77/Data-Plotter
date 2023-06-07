@@ -30,4 +30,6 @@ if xlsx_file is not None:
         st.write(f"{j}.",value)
         j = j + 1
 
-        
+    range = st.number_input("Enter the range", min_value=0, max_value=100, value=0, step=1)
+
+    st.write("Range:", range)
