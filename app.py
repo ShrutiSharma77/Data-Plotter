@@ -10,8 +10,6 @@ xlsx_file = st.file_uploader("Upload XLSX file", type=["xlsx"])
 if xlsx_file is not None:
     df = pd.read_excel(xlsx_file)
     st.write(df)
-    row_index = 0
-    row_values = df.iloc[row_index].to_numpy()
+    column_values = df.to_numpy()
     
-    st.write("Row Values:", row_values)
-
+    st.write("Column Values:", column_values)
