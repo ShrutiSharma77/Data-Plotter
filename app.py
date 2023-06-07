@@ -23,8 +23,11 @@ if xlsx_file is not None:
     
     averages_flattened = avg_dia.flatten()
 
+    j = 1
+
     st.write("Averages:")
     for value in averages_flattened:
-        st.write(value)
+        st.write(f"{j}.",value)
+        j = j + 1
 
         
