@@ -52,7 +52,9 @@ if xlsx_file is not None:
         x.append(range_label)
         lower_bound += range_value
 
-    st.write("X-axis:", x)
+    x_new = np.array(x)
+
+    st.write("X-axis:", x_new)
 
     num_ranges = upper_bound // range_value
 
@@ -66,3 +68,6 @@ if xlsx_file is not None:
         count_array[range_index] += 1
 
     st.write(count_array)
+    y_new = np.array(count_array)
+
+    st.write("Y-axis:",y_new)
