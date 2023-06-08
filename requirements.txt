@@ -1,9 +1,6 @@
 
 matplotlib==3.5.1
 
-mpmath==0.0.0
-
-
 numpy==1.21.5
 
 openpyxl==3.1.2
