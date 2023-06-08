@@ -77,5 +77,14 @@ if xlsx_file is not None:
 
     st.write("Y-axis:",y)
 
+    data = pd.DataFrame({
+    'Range': x_new,
+    'Number of Grains': y_new,
+    'Number of Grains/Total no. of Grains': y
+})
+
+# Display the table in Streamlit
+st.table(data)
+
 
     
