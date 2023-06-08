@@ -40,7 +40,7 @@ if xlsx_file is not None:
 
     rounded_value = math.ceil(max_value / 10) * 10
 
-    st.write("Rounded value:", rounded_value)
+    # st.write("Rounded value:", rounded_value)
 
     lower_bound = 0
     upper_bound = rounded_value
@@ -70,4 +70,12 @@ if xlsx_file is not None:
 
     y_new = np.array(count_array)
 
-    st.write("Y-axis:",y_new)
+    st.write("Number of grains:",y_new)
+
+
+    y = y_new/len(avg_dia)
+
+    st.write("Y-axis:",y)
+
+
+    
