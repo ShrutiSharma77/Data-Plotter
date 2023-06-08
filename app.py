@@ -80,9 +80,6 @@ if xlsx_file is not None:
 
     st.table(data)
 
-
-    st.title("Histogram")
-
     # Plot the histogram using Matplotlib
     fig, ax = plt.subplots()
     ax.bar(x_new, y)
