@@ -54,8 +54,6 @@ if xlsx_file is not None:
 
     x_new = np.array(x)
 
-    st.write("X-axis:", x_new)
-
     num_ranges = upper_bound // range_value
 
     count_array = [0] * num_ranges
@@ -70,12 +68,9 @@ if xlsx_file is not None:
 
     y_new = np.array(count_array)
 
-    st.write("Number of grains:",y_new)
-
 
     y = y_new/len(avg_dia)
 
-    st.write("Y-axis:",y)
 
     data = pd.DataFrame({
     'Range': x_new,
@@ -83,7 +78,6 @@ if xlsx_file is not None:
     'Number of Grains/Total no. of Grains': y
     })
 
-# Display the table in Streamlit
     st.table(data)
 
 
