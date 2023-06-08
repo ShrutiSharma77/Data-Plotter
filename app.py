@@ -40,7 +40,7 @@ if xlsx_file is not None:
 
     rounded_value = math.ceil(max_value / 10) * 10
 
-    # st.write("Rounded value:", rounded_value)
+    st.write("Rounded value:", rounded_value)
 
     lower_bound = 0
     upper_bound = rounded_value
