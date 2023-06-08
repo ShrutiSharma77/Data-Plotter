@@ -36,11 +36,11 @@ if xlsx_file is not None:
 
     max_value = np.max(avg_dia)
 
-    st.write("The maximum value in the array is:", max_value)
+    st.write("The maximum value of average is:", max_value)
+
+    st.write("Total Number of Grains:",len(avg_dia))
 
     rounded_value = math.ceil(max_value / 10) * 10
-
-    st.write("Rounded value:", rounded_value)
 
     lower_bound = 0
     upper_bound = rounded_value
@@ -81,4 +81,14 @@ if xlsx_file is not None:
     st.table(data)
 
 
-    
+    st.title("Histogram")
+
+    # Plot the histogram using Matplotlib
+    fig, ax = plt.subplots()
+    ax.bar(x_new, y)
+    ax.set_xlabel("Ranges")
+    ax.set_ylabel("Frequencies")
+    ax.set_title("Histogram")
+
+    # Display the plot in Streamlit
+    st.pyplot(fig)
