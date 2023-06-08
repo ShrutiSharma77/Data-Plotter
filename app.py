@@ -67,7 +67,7 @@ if xlsx_file is not None:
         range_index = lower_bound // range_value
         count_array[range_index] += 1
 
-    st.write(count_array)
+
     y_new = np.array(count_array)
 
     st.write("Y-axis:",y_new)
