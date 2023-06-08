@@ -47,7 +47,7 @@ if xlsx_file is not None:
 
     x = []
 
-    while lower_bound <= upper_bound:
+    while lower_bound < upper_bound:
         range_label = f"{lower_bound}-{lower_bound+range_value}"
         x.append(range_label)
         lower_bound += range_value
