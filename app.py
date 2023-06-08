@@ -52,7 +52,7 @@ if xlsx_file is not None:
         x = np.append(x, lower_bound)
         lower_bound += range_value
 
-    st.write("X-axis:", x)
+    st.write("Range:", x)
 
     num_ranges = upper_bound // range_value
 
@@ -68,6 +68,8 @@ if xlsx_file is not None:
     y_len = np.array(count_array)
 
     y = y_len/length
+
+    st.write("Number of grains:",y_len)
 
     st.write("Y-axis:",y)
 
