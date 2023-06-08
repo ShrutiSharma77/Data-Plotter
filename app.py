@@ -20,7 +20,6 @@ if xlsx_file is not None:
         averages.append(avg)
 
     avg_dia = np.array(averages)
-    length = len(avg_dia)
 
     averages_flattened = avg_dia.flatten()
 
@@ -46,13 +45,14 @@ if xlsx_file is not None:
     lower_bound = 0
     upper_bound = rounded_value
 
-    x = np.array([])
+    x = []
 
     while lower_bound <= upper_bound:
-        x = np.append(x, lower_bound)
+        range_label = f"{lower_bound}-{lower_bound+range_value}"
+        x.append(range_label)
         lower_bound += range_value
 
-    st.write("Range:", x)
+    st.write("X-axis:", x)
 
     num_ranges = upper_bound // range_value
 
@@ -65,15 +65,4 @@ if xlsx_file is not None:
         range_index = lower_bound // range_value
         count_array[range_index] += 1
 
-    y_len = np.array(count_array)
-
-    y = y_len/length
-
-    st.write("Number of grains:",y_len)
-
-    st.write("Y-axis:",y)
-
-
-   
-
-    
+    st.write(count_array)
