@@ -72,6 +72,6 @@ if xlsx_file is not None:
     st.write("Y-axis:",y)
 
 
-    st.title("Bar Graph")
+   
 
     
